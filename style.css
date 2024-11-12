@@ -52,6 +52,8 @@ h1 {
 h2 {
     font-family: Doto, arial;
     font-size: 2em;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 .options > p {
@@ -81,8 +83,13 @@ h2 {
     top: calc(50% - 2.5px);
     height: 5px;
     background-color: rgb(228, 228, 228);
+    opacity: 0.7;
     border-radius: 30px;
     z-index: -1;
+}
+
+.switch:hover > .slider {
+    opacity: 1;
 }
 
 .slider-block {
