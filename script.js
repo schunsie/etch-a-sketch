@@ -6,9 +6,6 @@ let gridSize = 16;
 createGrid()
 
 function createGrid() {
-    if (document.querySelector('.grid-block')) {
-        grid.innerHTML = '';
-    }
     let blockSize = calcSize(gridSize, grid.clientWidth);
     
     for (let i = 1; i <= gridSize; i++) {
@@ -79,5 +76,13 @@ confirmBtn.addEventListener('click', () => {
     if (newGridSize == gridSize) return;
 
     gridSize = newGridSize;
+    clearGrid();
     createGrid();
 });
+
+function clearGrid() {
+    // Check if grid is filled
+    if (document.querySelector('.grid-block')) {
+        grid.innerHTML = '';
+    }
+}
