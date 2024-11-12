@@ -137,8 +137,8 @@ input:checked + .slider-block {
     appearance: none;
     width: 20px; 
     height: 20px;
-    background: #04AA6D; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    background: #04AA6D;
+    cursor: pointer; 
     border-radius: 50%;
 }
   
@@ -150,9 +150,23 @@ input:checked + .slider-block {
     border-radius: 50%;
 }
 
+#confirm-size {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    margin-left: 5px;
+    color: #04AA6D;
+    opacity: 0.7;
+}
+
+#confirm-size:hover {
+    opacity: 1;
+    text-shadow: 0 0 5px #04AA6D;
+}
+
 
 /* Animations */
-
+/* Thanks to https://codepen.io/zak/pen/rWJzPy */
 @keyframes rainbow-bg{
 100%,0%{
     background-color: rgb(255,0,0);

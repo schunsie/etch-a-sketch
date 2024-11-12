@@ -3,10 +3,14 @@ const grid = document.querySelector('#grid');
 
 let gap = 2;
 let gridSize = 16;
-let blockSize = calcSize(gridSize, grid.clientWidth);
 createGrid()
 
 function createGrid() {
+    if (document.querySelector('.grid-block')) {
+        grid.innerHTML = '';
+    }
+    let blockSize = calcSize(gridSize, grid.clientWidth);
+    
     for (let i = 1; i <= gridSize; i++) {
         const row = document.createElement('div');
         row.classList.add('row');
@@ -40,7 +44,7 @@ grid.addEventListener('mouseover', (e) => {
 // Options menu
 
 // color slider
-const colorSwitch = document.querySelector('#color-switch')
+const colorSwitch = document.querySelector('#color-switch');
 let paintColor = 'black';
 let rainbowMode = false; 
 
@@ -63,8 +67,17 @@ function getPaintColor() {
 // Grid size slider
 const gridSlider = document.querySelector('#grid-slider');
 const sizeLabel = document.querySelector('#size');
+const confirmBtn = document.querySelector('#confirm-size');
+let newGridSize = gridSize;
 
 gridSlider.addEventListener('input', () => {
-    let size = gridSlider.value;
-    sizeLabel.textContent = `${size}x${size}`;
+    newGridSize = gridSlider.value;
+    sizeLabel.textContent = `${newGridSize}x${newGridSize}`;
+});
+
+confirmBtn.addEventListener('click', () => {
+    if (newGridSize == gridSize) return;
+
+    gridSize = newGridSize;
+    createGrid();
 });
