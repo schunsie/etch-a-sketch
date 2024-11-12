@@ -28,7 +28,6 @@ h1 {
     width: 500px;
     height: 500px;
     border: 0.2em rgb(90, 90, 90) solid;
-    margin: 0 auto;
     box-shadow: 0 0 2em 0em; 
 }
 
@@ -41,4 +40,110 @@ h1 {
     background-color: white;
     margin-bottom: 2px;
     flex-shrink: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* options */
+h2 {
+    font-family: Doto, arial;
+    font-size: 2em;
+}
+
+.options > p {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+/* color slider */
+.switch {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(50% - 2.5px);
+    height: 5px;
+    background-color: rgb(228, 228, 228);
+    border-radius: 30px;
+    z-index: -1;
+}
+
+.slider-block {
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 4px;
+    background-color: black;
+    border: 1px whitesmoke solid;
+    transition: .4s;
+}
+
+input:checked + .slider-block {
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+    animation: rainbow-bg 10s linear;
+	animation-iteration-count: infinite;
+}
+
+
+
+
+/* Animations */
+
+@keyframes rainbow-bg{
+100%,0%{
+    background-color: rgb(255,0,0);
+}
+8%{
+    background-color: rgb(255,127,0);
+}
+16%{
+    background-color: rgb(255,255,0);
+}
+25%{
+    background-color: rgb(127,255,0);
+}
+33%{
+    background-color: rgb(0,255,0);
+}
+41%{
+    background-color: rgb(0,255,127);
+}
+50%{
+    background-color: rgb(0,255,255);
+}
+58%{
+    background-color: rgb(0,127,255);
+}
+66%{
+    background-color: rgb(0,0,255);
+}
+75%{
+    background-color: rgb(127,0,255);
+}
+83%{
+    background-color: rgb(255,0,255);
+}
+91%{
+    background-color: rgb(255,0,127);
+}
 }
