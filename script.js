@@ -86,3 +86,11 @@ function clearGrid() {
         grid.innerHTML = '';
     }
 }
+
+// reset button
+const resetBtn = document.querySelector('#reset');
+
+resetBtn.addEventListener('click', () => {
+    clearGrid();
+    createGrid();
+});

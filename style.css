@@ -159,11 +159,18 @@ input:checked + .slider-block {
     opacity: 0.7;
 }
 
-#confirm-size:hover {
+#confirm-size:hover,
+#reset:hover {
+    cursor: pointer;
     opacity: 1;
     text-shadow: 0 0 5px #04AA6D;
 }
 
+#reset {
+    color: #04AA6D;
+    opacity: 0.7;
+    width: 2em;
+}
 
 /* Animations */
 /* Thanks to https://codepen.io/zak/pen/rWJzPy */
