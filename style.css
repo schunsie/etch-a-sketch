@@ -29,4 +29,5 @@ h1 {
     height: 500px;
     border: 0.2em rgb(90, 90, 90) solid;
     margin: 0 auto;
+    box-shadow: 0 0 2em 0em; 
 }
