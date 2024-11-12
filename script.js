@@ -38,6 +38,8 @@ grid.addEventListener('mouseover', (e) => {
 
 
 // Options menu
+
+// color slider
 const colorSwitch = document.querySelector('#color-switch')
 let paintColor = 'black';
 let rainbowMode = false; 
@@ -57,3 +59,12 @@ function getPaintColor() {
     }
     else return 'black';
 }
+
+// Grid size slider
+const gridSlider = document.querySelector('#grid-slider');
+const sizeLabel = document.querySelector('#size');
+
+gridSlider.addEventListener('input', () => {
+    let size = gridSlider.value;
+    sizeLabel.textContent = `${size}x${size}`;
+});
