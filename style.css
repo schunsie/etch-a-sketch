@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    color: rgb(233, 245, 255);
+}
+
+body {
+    background-color: hsl(249, 23%, 6%);
+}
+
+
+h1 {
+    margin: 50px 0;
+    font-family: Doto, arial;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.grid {
+    width: 500px;
+    height: 500px;
+    border: 0.2em rgb(90, 90, 90) solid;
+    margin: 0 auto;
+}
