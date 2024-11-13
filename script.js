@@ -28,6 +28,10 @@ function calcSize(gridSize, gridWidth) {
     return `${pixels}px`;
 }
 
+let mouseDown = false;
+document.onmousedown = () => mouseDown = true;
+document.onmouseup = () => mouseDown = false;
+
 grid.addEventListener('mouseover', (e) => {
     target = e.target;
     console.log(target);
@@ -36,11 +40,10 @@ grid.addEventListener('mouseover', (e) => {
     let isBlank = !target.getAttribute('style').includes('background-color');
     if (isBlank) {
         target.style.backgroundColor = `${getPaintColor()}`;
-        target.style.opacity = 0.1;
+        if (mouseDown) target.style.opacity = 1;
+        else target.style.opacity = 0.1;
     }
-    else {
-        increaseOpacity(target);
-    }
+    else increaseOpacity(target);
 });
 
 function increaseOpacity(target) {

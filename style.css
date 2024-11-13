@@ -172,6 +172,13 @@ input:checked + .slider-block {
     width: 2em;
 }
 
+#info {
+    max-width: 700px;
+    margin: 20px auto;
+    opacity: 0.5;
+    text-align: center;
+}
+
 /* Animations */
 /* Thanks to https://codepen.io/zak/pen/rWJzPy */
 @keyframes rainbow-bg{
