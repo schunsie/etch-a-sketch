@@ -29,17 +29,17 @@ h1 {
     height: 500px;
     border: 0.2em rgb(90, 90, 90) solid;
     box-shadow: 0 0 2em 0em; 
+    background-color: hsl(240, 6%, 13%);
 }
 
 .row {
     display: flex;
-    gap: 2px;
 }
 
 .grid-block {
     background-color: white;
-    margin-bottom: 2px;
     flex-shrink: 0;
+    border: 1px solid black;
 }
 
 .container {

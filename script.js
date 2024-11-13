@@ -1,7 +1,6 @@
 // Etch-a-sketch grid
 const grid = document.querySelector('#grid'); 
 
-let gap = 2;
 let gridSize = 16;
 createGrid()
 
@@ -25,12 +24,13 @@ function createGrid() {
 
 function calcSize(gridSize, gridWidth) {
     // All sizes in pixels
-    let pixels = (gridWidth - gap * (gridSize-1)) / gridSize;
+    let pixels = gridWidth / gridSize;
     return `${pixels}px`;
 }
 
 grid.addEventListener('mouseover', (e) => {
     target = e.target;
+    console.log(target);
     if (!target.classList.contains('grid-block')) return;
     
     let isBlank = !target.getAttribute('style').includes('background-color');
