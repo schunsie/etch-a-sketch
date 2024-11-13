@@ -45,7 +45,7 @@ grid.addEventListener('mouseover', (e) => {
 
 function increaseOpacity(target) {
     let opacity = Number(target.style.opacity);
-    target.style.opacity = opacity + 0.1;
+    if (opacity < 1) target.style.opacity = opacity + 0.1;
 }
 
 
