@@ -31,11 +31,22 @@ function calcSize(gridSize, gridWidth) {
 
 grid.addEventListener('mouseover', (e) => {
     target = e.target;
-
-    if (target.classList.contains('grid-block')) {
+    if (!target.classList.contains('grid-block')) return;
+    
+    let isBlank = !target.getAttribute('style').includes('background-color');
+    if (isBlank) {
         target.style.backgroundColor = `${getPaintColor()}`;
+        target.style.opacity = 0.1;
+    }
+    else {
+        increaseOpacity(target);
     }
 });
+
+function increaseOpacity(target) {
+    let opacity = Number(target.style.opacity);
+    target.style.opacity = opacity + 0.1;
+}
 
 
 // Options menu
