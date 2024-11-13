@@ -184,7 +184,35 @@ input:checked + .slider-block {
 }
 
 /* responsiveness */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 550px) {
+    #grid {
+        width: 300px;
+        height: 300px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .options {
+        width: 300px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .options > p {
+        margin-top: 15px;
+    }
+
+    #info {
+        max-width: 300px;
+    }
+
+}
+
+@media only screen and (min-width: 551px) and (max-width: 768px) {
     .container {
         flex-direction: column;
         align-items: center;
@@ -215,6 +243,7 @@ input:checked + .slider-block {
         max-width: 500px;
     }
 }
+
 
 
 /* Animations */
