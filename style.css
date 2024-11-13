@@ -179,6 +179,10 @@ input:checked + .slider-block {
     text-align: center;
 }
 
+#info-highlight {
+    color: #04AA6D;
+}
+
 /* Animations */
 /* Thanks to https://codepen.io/zak/pen/rWJzPy */
 @keyframes rainbow-bg{
