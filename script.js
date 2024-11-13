@@ -36,6 +36,8 @@ document.onmouseup = () => mouseDown = false;
 grid.addEventListener('mouseover', (e) => {
     target = e.target;
     console.log(target);
+
+    // prevents triggering event on border of container (grid)
     if (!target.classList.contains('grid-block')) return;
     
     let isBlank = !target.getAttribute('style').includes('background-color');
