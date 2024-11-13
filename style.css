@@ -183,6 +183,40 @@ input:checked + .slider-block {
     color: #04AA6D;
 }
 
+/* responsiveness */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .options {
+        width: 500px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .options > p {
+        margin: 0;
+    }
+
+    .options > h2 {
+        flex-basis: 100%;
+    }
+
+    .grid-slider-container > p {
+        text-align: center;
+    }
+
+    #info {
+        max-width: 500px;
+    }
+}
+
+
 /* Animations */
 /* Thanks to https://codepen.io/zak/pen/rWJzPy */
 @keyframes rainbow-bg{
