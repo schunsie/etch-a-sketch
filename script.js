@@ -28,6 +28,7 @@ function calcSize(gridSize, gridWidth) {
     return `${pixels}px`;
 }
 
+// Drawing with mouse
 let mouseDown = false;
 document.onmousedown = () => mouseDown = true;
 document.onmouseup = () => mouseDown = false;
