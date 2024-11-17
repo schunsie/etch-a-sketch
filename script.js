@@ -30,8 +30,8 @@ function calcSize(gridSize, gridWidth) {
 
 // Drawing with mouse
 let mouseDown = false;
-document.onmousedown = () => mouseDown = true;
-document.onmouseup = () => mouseDown = false;
+document.body.addEventListener("mousedown", () => (mouseDown = true))
+document.body.addEventListener("mouseup", () => (mouseDown = false))
 
 grid.addEventListener('mouseover', (e) => {
     target = e.target;
