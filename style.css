@@ -193,7 +193,7 @@ input:checked + .slider-block {
     .container {
         flex-direction: column;
         align-items: center;
-        gap: 2vh;
+        gap: 1rem;
     }
 
     .options {
