@@ -10,6 +10,7 @@ html,
 body {
     height: 100vh;
     color: rgb(233, 245, 255);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -18,17 +19,17 @@ body {
 
 
 h1 {
-    padding: 50px 0;
-    font-family: Doto, arial;
+    margin: 3rem 0;
+    font-family: 'Doto';
     font-size: 3rem;
     text-align: center;
 }
 
 #grid {
-    width: 500px;
-    height: 500px;
-    border: 0.2em rgb(90, 90, 90) solid;
-    box-shadow: 0 0 2em 0em; 
+    width: 50vh;
+    height: 50vh;
+    border: 0.2rem rgb(90, 90, 90) solid;
+    box-shadow: 0 0 2rem 0 rgba(255, 255, 255, 0.5); 
     background-color: hsl(240, 6%, 13%);
 }
 
@@ -45,20 +46,20 @@ h1 {
 .container {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 2%;
 }
 
 /* options */
 h2 {
-    font-family: Doto, arial;
-    font-size: 2em;
+    font-family: 'Doto';
+    font-size: 1.5rem;
     text-decoration: underline;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 0.1rem;
 }
 
 .options > p {
-    margin-top: 20px;
-    font-size: 1.5em;
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 
 /* color slider */
@@ -115,7 +116,7 @@ input:checked + .slider-block {
 /* Grid size slider */
 #size {
     margin: 0;
-    font-size: 1em;
+    font-size: 0.8rem;
     opacity: 0.7;
 }
 
@@ -153,8 +154,8 @@ input:checked + .slider-block {
 #confirm-size {
     background: none;
     border: none;
-    font-size: 1.2em;
-    margin-left: 5px;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
     color: #04AA6D;
     opacity: 0.7;
 }
@@ -169,7 +170,6 @@ input:checked + .slider-block {
 #reset {
     color: #04AA6D;
     opacity: 0.7;
-    width: 2em;
 }
 
 #info {
